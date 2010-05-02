@@ -8,7 +8,7 @@ Usage:
 git clone git://github.com/pbourke/dotfiles.git .dotfiles
 
 + r/w access
-git cline https://pbourke@github.com/pbourke/dotfiles.git .dotfiles
+git clone https://pbourke@github.com/pbourke/dotfiles.git .dotfiles
 
 2. Linkify the dotfiles
 
