@@ -1,5 +1,7 @@
 " turn on syntax highlighting according to the current filetype
 syntax on
+filetype plugin indent on
+
 set esckeys visualbell noerrorbells
 set nocompatible
 set backspace=indent,eol,start
@@ -31,3 +33,6 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
 nnoremap <F7> :noh<CR>
+
+" inserts new line without going into insert mode
+map <S-Enter> O<ESC> 
