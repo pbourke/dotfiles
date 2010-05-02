@@ -1,9 +1,10 @@
+set nocompatible
+
 " turn on syntax highlighting according to the current filetype
 syntax on
 filetype plugin indent on
 
 set esckeys visualbell noerrorbells
-set nocompatible
 set backspace=indent,eol,start
 set hlsearch incsearch
 set wildmenu
@@ -20,9 +21,16 @@ set viminfo='500,<500,\"50
 
 " Remember 500 lines of command and search history
 set history=500
+
+" Tabs are filled with spaces and 4 characters wide
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 set expandtab
+
+" delete by 'shiftwidth' spaces on a line with all blanks, rather than
+set smarttab
+
 set nobackup
 set mouse=a
 set winminheight=0
