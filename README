@@ -1,1 +1,15 @@
 .vimrc and other Unix config files
+
+Usage:
+
+1. Clone the files
+
++ read only access
+git clone git://github.com/pbourke/dotfiles.git .dotfiles
+
++ r/w access
+git cline https://pbourke@github.com/pbourke/dotfiles.git .dotfiles
+
+2. Linkify the dotfiles
+
+bash .dotfiles/linkify.sh
