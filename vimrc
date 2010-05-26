@@ -6,7 +6,12 @@ filetype plugin indent on
 
 set esckeys visualbell noerrorbells
 set backspace=indent,eol,start
-set hlsearch incsearch
+
+" search options
+set hlsearch    " highlight search term
+set incsearch   " search incrementally
+set ignorecase  " ignore case in searches
+
 set wildmenu
 set showcmd
 set number ruler
