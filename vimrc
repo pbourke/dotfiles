@@ -42,10 +42,16 @@ set winminheight=0
 set foldmethod=marker
 colorscheme default
 
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
 
 nnoremap <F7> :noh<CR>
 
 " inserts new line without going into insert mode
 map <S-Enter> O<ESC> 
+
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
+endif
