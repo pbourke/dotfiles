@@ -37,7 +37,6 @@ set expandtab
 set smarttab
 
 set nobackup
-set mouse=a
 set winminheight=0
 set foldmethod=marker
 colorscheme default
