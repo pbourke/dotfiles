@@ -37,9 +37,7 @@ set expandtab
 set smarttab
 
 set nobackup
-set mouse=a
 set winminheight=0
-set foldmethod=marker
 colorscheme default
 
 map <C-J> <C-W>j
@@ -54,4 +52,10 @@ map <S-Enter> O<ESC>
 
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
+if has("gui_running")
+    set mouse=a
+    set guioptions-=m
+    set guioptions-=T
 endif
