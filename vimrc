@@ -38,8 +38,6 @@ set smarttab
 
 set nobackup
 set winminheight=0
-set foldmethod=marker
-colorscheme default
 
 map <C-J> <C-W>j
 map <C-K> <C-W>k
@@ -54,3 +52,19 @@ map <S-Enter> O<ESC>
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+
+if has("gui_running")
+    set mouse=a
+    set guioptions-=m
+    set guioptions-=T
+    set background=light
+else
+    " make solarized play nice on reduced-palette terminals
+    let g:solarized_termcolors=256
+    set background=dark
+endif
+
+call pathogen#infect()
+
+" solarized theme: ~/.vim/bundle/vim-colors-solarized:
+colorscheme solarized
