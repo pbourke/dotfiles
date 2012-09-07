@@ -60,6 +60,7 @@ if has("gui_running")
     set background=light
 else
     " make solarized play nice on reduced-palette terminals
+    set t_Co=16
     let g:solarized_termcolors=256
     set background=dark
 endif
@@ -68,3 +69,5 @@ call pathogen#infect()
 
 " solarized theme: ~/.vim/bundle/vim-colors-solarized:
 colorscheme solarized
+
+set clipboard="exclude:.*"
