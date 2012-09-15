@@ -44,6 +44,7 @@ map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-L> <C-W>l
 
+" F7 clears all highlights from a previous search
 nnoremap <F7> :noh<CR>
 
 " inserts new line without going into insert mode
@@ -53,6 +54,7 @@ if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
+" set options for GUI/non-GUI environments
 if has("gui_running")
     set mouse=a
     set guioptions-=m
@@ -65,9 +67,16 @@ else
     set background=dark
 endif
 
+" initialize plugins in vim/bundle
 call pathogen#infect()
 
 " solarized theme: ~/.vim/bundle/vim-colors-solarized:
 colorscheme solarized
 
 set clipboard="exclude:.*"
+
+" add a new submodule to the bundle repository:
+" git submodule add git://github.com/tpope/vim-rails.git vim/bundle/vim-rails
+
+" initialize all submodules
+" git submodule update --init --recursive
