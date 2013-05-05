@@ -78,5 +78,8 @@ set clipboard="exclude:.*"
 " add a new submodule to the bundle repository:
 " git submodule add git://github.com/tpope/vim-rails.git vim/bundle/vim-rails
 
-" initialize all submodules
+" initialize all submodules:
 " git submodule update --init --recursive
+
+" update submodules to the latest commit:
+" git submodule foreach git pull
