@@ -67,6 +67,9 @@ else
     set background=dark
 endif
 
+" enable emmet-vim
+let g:user_emmet_mode='a'
+
 " initialize plugins in vim/bundle
 call pathogen#infect()
 
