@@ -78,6 +78,10 @@ colorscheme solarized
 
 set clipboard="exclude:.*"
 
+if filereadable(glob("~/.vimrc.local")) 
+    source ~/.vimrc.local
+endif
+
 " add a new submodule to the bundle repository:
 " git submodule add git://github.com/tpope/vim-rails.git vim/bundle/vim-rails
 
