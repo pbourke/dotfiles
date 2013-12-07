@@ -67,8 +67,12 @@ else
     set background=dark
 endif
 
-" enable emmet-vim
+" enable emmet-vim for HTML autocomplete (ie: div#id>p.class <ctrl-y>, to
+" complete
 let g:user_emmet_mode='a'
+
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path='c'
 
 " initialize plugins in vim/bundle
 call pathogen#infect()
