@@ -52,6 +52,7 @@ map <S-Enter> O<ESC>
 
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
+    autocmd! FileType python setl nosmartindent
 endif
 
 " set options for GUI/non-GUI environments
