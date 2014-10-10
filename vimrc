@@ -53,6 +53,11 @@ map <S-Enter> O<ESC>
 if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
     autocmd! FileType python setl nosmartindent
+    autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+    autocmd FileType eruby setlocal shiftwidth=2 tabstop=2
+    autocmd FileType html setlocal shiftwidth=2 tabstop=2
+    autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+    autocmd FileType scss setlocal shiftwidth=2 tabstop=2
 endif
 
 " set options for GUI/non-GUI environments
@@ -73,7 +78,7 @@ endif
 let g:user_emmet_mode='a'
 
 let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_working_path='c'
+let g:ctrlp_working_path_mode='ra'
 
 " initialize plugins in vim/bundle
 call pathogen#infect()
