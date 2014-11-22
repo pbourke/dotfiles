@@ -80,6 +80,12 @@ let g:user_emmet_mode='a'
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode='ra'
 
+" Ultrasnips: https://github.com/SirVer/ultisnips
+let g:UltiSnipsSnippetDirectories=["mysnippets"]
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 " initialize plugins in vim/bundle
 call pathogen#infect()
 
