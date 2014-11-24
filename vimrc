@@ -70,7 +70,7 @@ else
     " make solarized play nice on reduced-palette terminals
     set t_Co=16
     let g:solarized_termcolors=256
-    set background=dark
+    set background=light
 endif
 
 " enable emmet-vim for HTML autocomplete (ie: div#id>p.class <ctrl-y>, to
@@ -93,8 +93,20 @@ endif
 " initialize plugins in vim/bundle
 call pathogen#infect()
 
-" solarized theme: ~/.vim/bundle/vim-colors-solarized:
-colorscheme solarized
+if has("gui_running")
+    " solarized theme: ~/.vim/bundle/vim-colors-solarized:
+    colorscheme solarized
+
+    set mouse=a
+    set guioptions-=m
+    set guioptions-=T
+    set background=light
+else
+    colorscheme delek
+
+    set t_Co=16
+    set background=light
+endif
 
 set clipboard="exclude:.*"
 
