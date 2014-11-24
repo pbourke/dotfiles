@@ -86,6 +86,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+if filereadable(glob("~/.vimrc.local")) 
+    source ~/.vimrc.local
+endif
+
 " initialize plugins in vim/bundle
 call pathogen#infect()
 
@@ -93,10 +97,6 @@ call pathogen#infect()
 colorscheme solarized
 
 set clipboard="exclude:.*"
-
-if filereadable(glob("~/.vimrc.local")) 
-    source ~/.vimrc.local
-endif
 
 " add a new submodule to the bundle repository:
 " git submodule add git://github.com/tpope/vim-rails.git vim/bundle/vim-rails
