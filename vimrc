@@ -77,7 +77,7 @@ endif
 " complete
 let g:user_emmet_mode='a'
 
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlP .'
 let g:ctrlp_working_path_mode='ra'
 
 " Ultrasnips: https://github.com/SirVer/ultisnips
