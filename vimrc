@@ -12,6 +12,10 @@ set hlsearch    " highlight search term
 set incsearch   " search incrementally
 set ignorecase  " ignore case in searches
 
+" case-sensitive search only if search string contains at least one uppercase
+" letter
+set smartcase
+
 set wildmenu
 set showcmd
 set number ruler
@@ -36,8 +40,18 @@ set expandtab
 " delete by 'shiftwidth' spaces on a line with all blanks, rather than
 set smarttab
 
+" don't create backup files (version control, yo)
 set nobackup
+
+" allow seamless blocks for lines of different lengths
+set virtualedit=block
+
+" multiple windows should stack tightly
 set winminheight=0
+
+" open splits in a more intuitive order
+set splitbelow " sp opens new split below current window
+set splitright " vs opens new split to the right of current window
 
 map <C-J> <C-W>j
 map <C-K> <C-W>k
@@ -46,6 +60,9 @@ map <C-L> <C-W>l
 
 " F7 clears all highlights from a previous search
 nnoremap <F7> :noh<CR>
+
+" Disable ex mode hotkey
+nnoremap Q <nop>
 
 " inserts new line without going into insert mode
 map <S-Enter> O<ESC> 
@@ -60,19 +77,6 @@ if has("autocmd")
     autocmd FileType scss setlocal shiftwidth=2 tabstop=2
 endif
 
-" set options for GUI/non-GUI environments
-if has("gui_running")
-    set mouse=a
-    set guioptions-=m
-    set guioptions-=T
-    set background=light
-else
-    " make solarized play nice on reduced-palette terminals
-    set t_Co=16
-    let g:solarized_termcolors=256
-    set background=light
-endif
-
 " enable emmet-vim for HTML autocomplete (ie: div#id>p.class <ctrl-y>, to
 " complete
 let g:user_emmet_mode='a'
@@ -80,12 +84,13 @@ let g:user_emmet_mode='a'
 let g:ctrlp_cmd = 'CtrlP .'
 let g:ctrlp_working_path_mode='ra'
 
-" Ultrasnips: https://github.com/SirVer/ultisnips
+" Ultisnips: https://github.com/SirVer/ultisnips
 let g:UltiSnipsSnippetDirectories=["mysnippets"]
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" machine-specific vimrc settings (ie fonts)
 if filereadable(glob("~/.vimrc.local")) 
     source ~/.vimrc.local
 endif
@@ -93,6 +98,7 @@ endif
 " initialize plugins in vim/bundle
 call pathogen#infect()
 
+" set options for GUI/non-GUI environments
 if has("gui_running")
     " solarized theme: ~/.vim/bundle/vim-colors-solarized:
     colorscheme solarized
@@ -106,6 +112,7 @@ else
 
     set t_Co=16
     set background=light
+    let g:solarized_termcolors=256
 endif
 
 set clipboard="exclude:.*"
