@@ -8,3 +8,4 @@ ln -s $DIR/vimrc ~/.vimrc
 ln -s $DIR/vim ~/.vim
 ln -s $DIR/gitconfig ~/.gitconfig
 ln -s $DIR/emacs.d ~/.emacs.d
+ln -s $DIR/ledgerrc ~/.ledgerrc
