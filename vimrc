@@ -117,6 +117,8 @@ endif
 
 set clipboard="exclude:.*"
 
+let mapleader=","
+
 " add a new submodule to the bundle repository:
 " git submodule add git://github.com/tpope/vim-rails.git vim/bundle/vim-rails
 
