@@ -124,4 +124,14 @@ set clipboard="exclude:.*"
 " git submodule update --init --recursive
 
 " update submodules to the latest commit:
-" git submodule foreach git pull
+" submodules are not on a branch by default (detached head), so to update
+" each one, you must switch to the branch (almost always master) and pull,
+" thus for each bundle:
+
+" $ cd bundle/<the plugin>
+" $ git branch -a                          # confirm that master is the appropriate branch
+" $ git checkout master
+" $ git pull                               # plugin is updated to latest commit on master
+" $ cd ..
+" $ git add bundle; git commit; git push   # update submodule references in github
+
