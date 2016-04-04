@@ -36,6 +36,7 @@
 ;;
 ;; General configuration
 ;;
+(global-set-key (kbd "M-SPC") 'complete-symbol)
 
 ; enable line numbers for all buffers
 (global-linum-mode 1)
@@ -48,5 +49,4 @@
 (helm-mode t)
 
 (global-set-key (kbd "M-x") 'helm-M-x) ; use Helm for M-x command browsing / execution
-
 
