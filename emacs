@@ -21,7 +21,8 @@
     cider
     smex
     rainbow-delimiters
-    helm))
+    helm
+    csharp-mode))
 
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
