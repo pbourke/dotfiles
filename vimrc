@@ -96,7 +96,7 @@ if filereadable(glob("~/.vimrc.local"))
 endif
 
 " initialize plugins in vim/bundle
-call pathogen#infect()
+execute pathogen#infect()
 
 " set options for GUI/non-GUI environments
 if has("gui_running")
