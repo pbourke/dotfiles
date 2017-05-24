@@ -137,3 +137,4 @@ let mapleader=","
 " $ cd ..
 " $ git add bundle; git commit; git push   # update submodule references in github
 
+" Run :Helptags to generate help for all pathogen bundles
