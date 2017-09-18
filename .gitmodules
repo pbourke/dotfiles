@@ -62,3 +62,9 @@
 [submodule "vim/bundle/vimwiki"]
 	path = vim/bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "vim/bundle/dracula-theme"]
+	path = vim/bundle/dracula-theme
+	url = https://github.com/dracula/vim.git
+[submodule "vim/bundle/vim-colors-lucid"]
+	path = vim/bundle/vim-colors-lucid
+	url = https://github.com/cseelus/vim-colors-lucid.git

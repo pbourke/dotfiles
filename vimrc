@@ -108,11 +108,9 @@ if has("gui_running")
     set guioptions-=T
     set background=light
 else
-    colorscheme delek
+    colorscheme default
 
-    set t_Co=16
-    set background=light
-    let g:solarized_termcolors=256
+    set background=dark
 endif
 
 set clipboard="exclude:.*"
