@@ -139,6 +139,22 @@ Plug 'https://github.com/cseelus/vim-colors-lucid.git'
 " Syntastic syntax checker
 Plug 'https://github.com/vim-syntastic/syntastic.git'
 
+" Pairs of handy bracket mappings
+Plug 'https://github.com/tpope/vim-unimpaired.git'
+
+" Syntax highlighting for nginx config files
+Plug 'https://github.com/vim-scripts/nginx.vim.git'
+
+" Mediawiki syntax
+Plug 'https://github.com/chikamichi/mediawiki.vim.git'
+
+" Asciidoc syntax
+Plug 'https://github.com/asciidoc/vim-asciidoc.git'
+
+" Jinja template syntax
+Plug 'https://github.com/vim-scripts/Jinja.git'
+
+
 " Python
 " Code folding:
 " Plug 'https://github.com/tmhedberg/SimpylFold.git'
