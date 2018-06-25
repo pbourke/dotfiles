@@ -95,9 +95,6 @@ if filereadable(glob("~/.vimrc.local"))
     source ~/.vimrc.local
 endif
 
-" initialize plugins in vim/bundle
-execute pathogen#infect()
-
 " set options for GUI/non-GUI environments
 if has("gui_running")
     " solarized theme: ~/.vim/bundle/vim-colors-solarized:
@@ -117,22 +114,56 @@ set clipboard="exclude:.*"
 
 let mapleader=","
 
-" add a new submodule to the bundle repository:
-" git submodule add git://github.com/tpope/vim-rails.git vim/bundle/vim-rails
+call plug#begin('~/.vim/plugged')
 
-" initialize all submodules:
-" git submodule update --init --recursive
+" for working with git:
+Plug 'https://github.com/tpope/vim-fugitive.git'
+Plug 'https://github.com/airblade/vim-gitgutter.git'
 
-" update submodules to the latest commit:
-" submodules are not on a branch by default (detached head), so to update
-" each one, you must switch to the branch (almost always master) and pull,
-" thus for each bundle:
+" text snippet manager
+Plug 'https://github.com/SirVer/ultisnips.git'
 
-" $ cd bundle/<the plugin>
-" $ git branch -a                          # confirm that master is the appropriate branch
-" $ git checkout master
-" $ git pull                               # plugin is updated to latest commit on master
-" $ cd ..
-" $ git add bundle; git commit; git push   # update submodule references in github
+" markdown
+Plug 'https://github.com/tpope/vim-markdown.git'
 
-" Run :Helptags to generate help for all pathogen bundles
+" Fuzzy searcher
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" colorschemes
+Plug 'https://github.com/altercation/vim-colors-solarized.git'
+Plug 'https://github.com/flazz/vim-colorschemes.git'
+Plug 'https://github.com/dracula/vim.git'
+Plug 'https://github.com/cseelus/vim-colors-lucid.git'
+
+" Syntastic syntax checker
+Plug 'https://github.com/vim-syntastic/syntastic.git'
+
+" Python
+" Code folding:
+" Plug 'https://github.com/tmhedberg/SimpylFold.git'
+" Indents
+" Plug 'https://github.com/vim-scripts/indentpython.vim.git'
+" Autocompletion
+" Plug 'https://github.com/davidhalter/jedi-vim.git'
+
+
+" Uncomment to use these plugins
+"Plug 'https://github.com/tpope/vim-rails.git'
+"Plug 'https://github.com/kien/ctrlp.vim.git'
+"Plug 'https://github.com/guns/vim-clojure-static.git'
+"Plug 'https://github.com/duganchen/vim-soy.git'
+"Plug 'https://github.com/tpope/vim-fireplace.git'
+"Plug 'https://github.com/mattn/emmet-vim.git'
+"Plug 'https://github.com/elixir-lang/vim-elixir.git'
+"Plug 'https://github.com/phleet/vim-mercenary.git'
+"Plug 'https://github.com/ledger/vim-ledger.git'
+"Plug 'https://github.com/guns/vim-sexp'
+"Plug 'https://github.com/tpope/vim-surround.git'
+"Plug 'https://github.com/tpope/vim-sexp-mappings-for-regular-people.git'
+"Plug 'https://github.com/tpope/vim-repeat.git'
+"Plug 'https://github.com/exu/pgsql.vim'
+"Plug 'https://github.com/fsharp/vim-fsharp'
+"Plug 'https://github.com/vimwiki/vimwiki.git'
+
+call plug#end()
