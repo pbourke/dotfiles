@@ -95,21 +95,6 @@ if filereadable(glob("~/.vimrc.local"))
     source ~/.vimrc.local
 endif
 
-" set options for GUI/non-GUI environments
-if has("gui_running")
-    " solarized theme: ~/.vim/bundle/vim-colors-solarized:
-    colorscheme solarized
-
-    set mouse=a
-    set guioptions-=m
-    set guioptions-=T
-    set background=light
-else
-    colorscheme default
-
-    set background=dark
-endif
-
 set clipboard="exclude:.*"
 
 let mapleader=","
@@ -183,3 +168,18 @@ Plug 'https://github.com/vim-scripts/Jinja.git'
 "Plug 'https://github.com/vimwiki/vimwiki.git'
 
 call plug#end()
+
+" set options for GUI/non-GUI environments
+if has("gui_running")
+    " solarized theme: ~/.vim/bundle/vim-colors-solarized:
+    colorscheme solarized
+
+    set mouse=a
+    set guioptions-=m
+    set guioptions-=T
+    set background=light
+else
+    colorscheme default
+
+    set background=dark
+endif
