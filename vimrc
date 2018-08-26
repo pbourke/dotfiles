@@ -139,6 +139,7 @@ Plug 'https://github.com/asciidoc/vim-asciidoc.git'
 " Jinja template syntax
 Plug 'https://github.com/vim-scripts/Jinja.git'
 
+Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
 
 " Python
 " Code folding:
