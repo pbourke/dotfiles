@@ -3,3 +3,5 @@ vim/.netrwhist
 **/#*
 *.swp
 vim/plugged
+emacs.d/elpa
+emacs.d/ido.last
