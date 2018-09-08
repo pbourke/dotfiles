@@ -1,6 +1,6 @@
 (require 'package)
 
-(require 'init-local nil t)
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (add-to-list 'package-archives
 	     '("melpa" . "https://stable.melpa.org/packages/") t)
@@ -16,14 +16,18 @@
 
 (setq auto-install-packages
       '(solarized-theme
-        elpy))
+        elpy
+	which-key))
 
 (dolist (pkg auto-install-packages)
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
+(require 'init-local nil t)
+
 (load-theme 'solarized-dark t)
 
+;; Python configuration
 (elpy-enable)
 
 (setq python-shell-interpreter "jupyter"
@@ -31,6 +35,12 @@
       python-shell-prompt-detect-failure-warning nil)
 (add-to-list 'python-shell-completion-native-disabled-interpreters
              "jupyter")
+
+(menu-bar-mode -1)
+
+(tool-bar-mode -1)
+
+(which-key-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
