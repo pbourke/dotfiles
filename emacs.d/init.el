@@ -16,8 +16,8 @@
 
 (setq auto-install-packages
       '(solarized-theme
-        elpy
-	which-key))
+       elpy
+       which-key))
 
 (dolist (pkg auto-install-packages)
   (unless (package-installed-p pkg)
@@ -41,6 +41,13 @@
 (tool-bar-mode -1)
 
 (which-key-mode)
+
+(column-number-mode t)                ;display column numbers in the window status line
+(line-number-mode -1)                 ;don't display line numbers in the window status line 
+(global-display-line-numbers-mode t)  ;show line numberes in window gutter
+(global-hl-line-mode t)		      ;highlight the current line
+
+(setq dired-isearch-filenames t)                      ;c-s only searches filenames in dired buffer
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
