@@ -18,7 +18,8 @@
       '(solarized-theme
        elpy
        which-key
-       dockerfile-mode))
+       dockerfile-mode
+       company))
 
 (dolist (pkg auto-install-packages)
   (unless (package-installed-p pkg)
@@ -43,10 +44,14 @@
 
 (which-key-mode)
 
+(show-paren-mode t)			;highlight balancing paren
+
 (column-number-mode t)                ;display column numbers in the window status line
 (line-number-mode -1)                 ;don't display line numbers in the window status line 
 (global-display-line-numbers-mode t)  ;show line numberes in window gutter
 (global-hl-line-mode t)		      ;highlight the current line
+
+(setq gc-cons-threshold 20000000)	;increase GC to every 20MB from default .7MB for performance
 
 (setq dired-isearch-filenames t)                      ;c-s only searches filenames in dired buffer
 
@@ -55,6 +60,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-show-numbers t)
+ '(global-company-mode t)
  '(package-selected-packages
    (quote
     (dockerfile-mode better-defaults elpy solarized-theme))))
