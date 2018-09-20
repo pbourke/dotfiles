@@ -6,3 +6,4 @@ vim/plugged
 emacs.d/elpa
 emacs.d/ido.last
 **/init-local.el
+emacs.d/tramp
