@@ -139,7 +139,8 @@ Plug 'https://github.com/asciidoc/vim-asciidoc.git'
 " Jinja template syntax
 Plug 'https://github.com/vim-scripts/Jinja.git'
 
-Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
+" beancount syntax
+Plug 'https://github.com/nathangrigg/vim-beancount.git'
 
 " Python
 " Code folding:
@@ -151,6 +152,7 @@ Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
 
 
 " Uncomment to use these plugins
+"Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete' }
 "Plug 'https://github.com/tpope/vim-rails.git'
 "Plug 'https://github.com/kien/ctrlp.vim.git'
 "Plug 'https://github.com/guns/vim-clojure-static.git'
