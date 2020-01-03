@@ -46,6 +46,8 @@
 
 (which-key-mode)
 
+(windmove-default-keybindings)
+
 (show-paren-mode t)			;highlight balancing paren
 
 (column-number-mode t)                ;display column numbers in the window status line

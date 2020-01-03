@@ -142,6 +142,9 @@ Plug 'https://github.com/vim-scripts/Jinja.git'
 " beancount syntax
 Plug 'https://github.com/nathangrigg/vim-beancount.git'
 
+" TOML configuration file syntax
+Plug 'cespare/vim-toml'
+
 " Python
 " Code folding:
 " Plug 'https://github.com/tmhedberg/SimpylFold.git'
