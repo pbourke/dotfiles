@@ -145,6 +145,9 @@ Plug 'https://github.com/nathangrigg/vim-beancount.git'
 " TOML configuration file syntax
 Plug 'cespare/vim-toml'
 
+" Elm language syntax
+Plug 'elmcast/elm-vim'
+
 " Python
 " Code folding:
 " Plug 'https://github.com/tmhedberg/SimpylFold.git'
