@@ -148,6 +148,9 @@ Plug 'cespare/vim-toml'
 " Elm language syntax
 Plug 'elmcast/elm-vim'
 
+" Liquid templates (Shopify)
+Plug 'https://github.com/tpope/vim-liquid'
+
 " Python
 " Code folding:
 " Plug 'https://github.com/tmhedberg/SimpylFold.git'
