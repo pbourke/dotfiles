@@ -154,6 +154,9 @@ Plug 'https://github.com/tpope/vim-liquid'
 " Vidir - allow file operations within vim
 Plug 'https://github.com/trapd00r/vidir.git'
 
+" Scratch buffers
+Plug 'https://github.com/mtth/scratch.vim.git'
+
 " Python
 " Code folding:
 " Plug 'https://github.com/tmhedberg/SimpylFold.git'
