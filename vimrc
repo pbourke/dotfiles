@@ -151,6 +151,9 @@ Plug 'elmcast/elm-vim'
 " Liquid templates (Shopify)
 Plug 'https://github.com/tpope/vim-liquid'
 
+" Vidir - allow file operations within vim
+Plug 'https://github.com/trapd00r/vidir.git'
+
 " Python
 " Code folding:
 " Plug 'https://github.com/tmhedberg/SimpylFold.git'
